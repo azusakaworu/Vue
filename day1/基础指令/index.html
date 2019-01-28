@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>vue day-1 基础指令 </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+      
+		{{msg}}
+		<input type="text" name="" v-model="msg">
+		<!-- v-model 会将msg的值会赋予输入框，输入框的值会影响数据 value属性没用-->
+
+
+		<div v-text="msg">这里啥也不能写，写了也没用</div>
+		<!-- v-text === {{}}  解决先渲染dom js文件出的慢的问题 然后出现{{}}在页面上 不过没啥大碍 不用管 开发时还是多用{{}} 方便 以后也有更好的方法解决这个问题-->
+        
+		
+		<div v-once>
+			{{msg}}
+		</div>
+        <!-- v-once 只绑定一次 数据再次变化 不会跟着变 也不会导致页面刷新 -->
+
+
+        <div v-html="p">{{p}}</div>
+        <!-- v-html 把HTML字符当做HTML渲染 一定是可以信任的HTML-->
+	</main>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

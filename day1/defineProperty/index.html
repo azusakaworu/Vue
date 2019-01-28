@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>vue day-1 </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+        <!-- 表单元素  input checkbox textarea radio select -->
+        <!-- vue 指令directive dom上的行间属性 v-XXX value属性默认情况会被Vue忽略掉 -->
+		{{msg}}
+		<input type="text" name="" v-model="msg">
+		<!-- v-model 会将msg的值会赋予输入框，输入框的值会影响数据 -->
+	</main>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
