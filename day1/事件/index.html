@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<title>vue day-1 forEach</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>vue day-1 绑定事件</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 </head>
 <body>
+	<main id="app">
+		{{msg}}
+		<button v-on:click="fun">点我啊</button>
+		<!-- 如果不传参 则不要写括号 如果写括号了 就要传实参 如果用到万事通：要写$event 必须有$ -->
+		<button @click="fun1($event,'我是a的实参')">我是fun1的按钮</button>
+		<button @click="fun2('我是a的实参')">我是fun2的按钮</button>
+		<button @click="fun3($event)">我是fun3的按钮</button>
+	</main>
 
 
 <script type="text/javascript" src="js/main.js"></script>

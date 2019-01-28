@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<title>vue day-1 forEach</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>vue day-1 v-for循环</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 </head>
 <body>
+	<main id="app">
+
+		{{msg}}
+      
+		<!-- v-for  在原有基础上增加循环的 性能高效 要循环谁就在谁的身上循环-->
+		<ul>
+			<!-- <li v-for="item in fruites">{{item.name}}</li> -->
+
+        <!-- item in fruites  最好用in of有的时候报错 -->
+			<li v-for="(item,index) in fruites">{{index+1}}.{{item.name}}
+              <ul>
+              	<!-- 奥义： 双重循环 二维数组 -->
+				  <li v-for="(c,childIndex) in item.color">{{index+1}}.{{childIndex+1}}.{{c}}</li>
+			  </ul>
+			</li>
+			
+		</ul>
+		<!-- 最常见的就是数组，其他都不常见 -->
+		
+         <!-- 字符串循环  -->
+		<li v-for="a in 'aaaaa'">{{a}}</li>
+		<!-- 数字循环 -->
+		<li v-for="num in 15">{{num}}</li>
+		<!-- 对象循环 -->
+		<li v-for="(value,key,index) in obj">{{index+1}}.{{key}}:{{value}}</li>
+	</main>
 
 
 <script type="text/javascript" src="js/main.js"></script>

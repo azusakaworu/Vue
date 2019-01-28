@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<title>vue day-1 forEach</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>vue day-1 prictise</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 </head>
 <body>
-
+  <main id="app">
+  	<input type="text" name="" v-model="value" @keyup.enter = "add">
+  	<!-- modifiers vue里面的键盘修饰符 @keyup.13 后面不用写if(e.keyCode===13) 了  @keyup.enter也行 @keyup.ctrl.enter-->
+  	  <ul>
+  	  	<li v-for=" (item,index) in arr">{{item}}
+          <button @click="romove(index)">删除</button>
+  	  	</li>
+  	  </ul>
+  	
+  </main>
 
 <script type="text/javascript" src="js/main.js"></script>
 </body>
