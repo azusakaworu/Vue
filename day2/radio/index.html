@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>day2-select</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+
+       <!-- 下拉菜单 -->
+       <select v-model="a" multiple>
+       	<!-- disabled 不能再选 -->
+       	  <option value="" disabled>请选择</option>
+       	  <option value="1" >你好</option>
+       	  <!-- 如果value属性不写 默认取值option里的你好 -->
+       	  <option value="2" >不好</option>
+       	  <option value="3" >我好</option>
+       </select>
+{{a}}
+
+
+       <input type="radio" v-model="b" value="男">男
+       <input type="radio" v-model="b" value="女">女
+{{b}}
+
+		
+	</main>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

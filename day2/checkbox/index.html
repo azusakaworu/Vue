@@ -2,11 +2,32 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<title>day2-</title>
+	<title>day2-CheckBox</title>
+	<!-- 这里的Vue用的npm安装包来导入的 -->
+	<script type="text/javascript" src="node_modules\vue\dist\vue.js"></script>
+	
 </head>
 <body>
+   <main id="app">
+   	{{msg}}
+   	<!-- 一般不写this {{this.msg}} 花括号里尽量不要写逻辑（三元）运算 用computed-->
+
+   	<!-- Vue内置指令：DOM行间属性 v-XXX="这里都是变量 ，不是字符串"-->
+
+    <input type="checkbox" name="" v-model="a">
+    {{a}}<br>
+    <!-- 如果是复选框 会把此值a 转化成布尔值 true代表选中 -->
 
 
+
+    <!-- 如果是多个CheckBox 要增加value属性 并且数据类型是数组 -->
+    爱好： <input type="checkbox"  v-model="b" value="游泳">游泳
+           <input type="checkbox"  v-model="b" value="追番">追番
+           <input type="checkbox"  v-model="b" value="躺尸">躺尸
+           {{b}}
+
+   </main>
+<!-- v-model   表单元素必须加 但value，checked selected Vue忽略不管，将数据绑定在视图上，并且视图修改后会影响数据的变化 -->
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

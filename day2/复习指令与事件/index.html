@@ -3,8 +3,22 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<title>day2-</title>
+	<style type="text/css">[v-cloak]{display:none}</style>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 </head>
 <body>
+	<main id="app" v-cloak>
+        <!-- v-text 相当于{{}}  v-cloak 解决闪烁问题 不过后期用不到 -->
+
+        <!-- v-once 写在不想刷新的标签上 不用绑数据-->
+        <!-- v-html 将HTML字符串转化成HTML -->
+        <!-- v-for 循环（数组，对象，字符串，数字）多个参数要和in 有空格（value,index) in 数组 -->
+
+        <!-- 事件 (v-on:)  @ 绑定给DOM元素 @事件名="fun"    函数在methods里面写 这里函数的this指向的是实例vm ,不能用箭头函数， 万事通event： 不写括号自动传入，加了括号得手动写$event-->
+
+		
+	</main>
+	
 
 
 <script type="text/javascript" src="js/main.js"></script>
