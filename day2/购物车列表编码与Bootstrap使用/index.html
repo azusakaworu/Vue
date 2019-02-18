@@ -12,9 +12,38 @@
 </head>
 <body>
 	<main id="app">
-		<div id="prod" style="color: green">
+		<div class="container">
+			<div class="row">
+
+				  <table class="table table-hover table-bordered table-info">
+                   <h2 class="">哔哩哔哩98亿</h2>
+			   <tr>
+				<th>全选 <input type="checkbox" name=""></th>
+				<td>商品</td>
+				<td>单价</td>
+				<td>数量</td>
+				<td>小计</td>
+				<td>操作</td>
+		       </tr>
+
+		       <tr v-for="(product,index) in products">
+				<td><input type="checkbox" ></td>
+				<td>{{product.productName}}</td>
+				<td>{{product.productPrice}}</td>
+				<!-- .number 是让输入框的值变成数字类型 .lazy当输入框失去焦点时更新数据 -->
+				<td>
+					<input type="number" v-model.number="product.productCount" name="">
+				</td>
+				    <!-- 过滤器 原数据不变的情况 只是改变显示的效果 | 管道符-->
+				<td>{{product.productCount*product.productPrice | toFixed(2)}}</td>
+				<td><button type="button" class="btn btn-danger" @click="remove(product)">删除</button></td>
+		      </tr>
+		      </table>
+             </div>
+        </div>
+		
 			
-		</div>
+		
 		
 	</main>
 
