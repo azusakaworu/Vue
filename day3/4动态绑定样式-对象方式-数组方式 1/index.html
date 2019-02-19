@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/mian.css">
+	<title>day3动态绑定样式</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+		<!--  -->
+		<div class="x y" :class="{z:flag}">京剧猫<br>bait</div>
+		<div class="x y" :class="[class1,class2,{z:false}]">京剧猫大电影<br>妙啊</div>
+
+		<div :class="{true:'x',false:'y'}[true]">你不会用吧？</div>
+
+         <!-- 循环间隔性显示样式 -->
+		<div v-for="(a,index) in 10" :class="{z:index%2}">{{a}}</div>
+	</main>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

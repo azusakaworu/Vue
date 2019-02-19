@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/mian.css">
+	<title>day3动态绑定样式</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+		<!-- v-if v-else 必须连这写  false代表不显示-->
+		<!-- template 标签是vue自带的 没有任何实际意义 
+			就是包裹元素 不影响dom结构（代替div）
+			只能配合v-if v-else使用 -->
+	<template v-if="flag">
+		<div>白糖是屁宗</div>
+		<div>白糖是屁宗</div>
+		<div>白糖是屁宗</div>
+		<div>白糖是屁宗</div>
+	</template>
+		<div v-else>是做宗。。</div>
+        <div>是作宗</div>
+
+
+        <button @click="exchange">点我啊</button>
+        <!-- 或者直接写 @click="cut=!cut"-->
+
+        <template v-if="cut">
+        	<label >注册</label>
+        	<input type="text" key="1">
+        	<!-- 先移除1的DOM  key用来区分这两个input-->
+        </template>
+
+<!-- v-else 不用写条件 -->
+         <template v-else>
+        	<label>登录</label>
+        	<!-- 再进来2的DOM -->
+        	<input type="text" key="2">
+        </template>
+
+	</main>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

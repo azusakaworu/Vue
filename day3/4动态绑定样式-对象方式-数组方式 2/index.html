@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/mian.css">
+	<title>day3动态绑定样式3</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+		<div style="color: green;" 
+		     :style="{backgroundColor:'red',color:'pink'}">azusakaworu</div>
+		<div :style="[sty1,sty2,{fontSize:'100px'}]">hahahah</div>
+	</main>
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
