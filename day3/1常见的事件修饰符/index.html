@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>day3常见的事件修饰符</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+		<div @click="parent">parent
+			<div @click.self="child">child
+				<div @click="grandson">grandson</div>
+
+			</div>
+		</div>
+		<!-- 去除默认行为 ：跳转页面 -->
+		<a href="https://www.bilibili.com" @click.prevent="parent">去哔哩哔哩</a>
+	</main>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

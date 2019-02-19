@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>day3常见的事件修饰符</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+		<!-- 自己取的checkAll名字 根据下面input数组的值 算出的结果 -->
+		全选 <input type="checkbox" v-model="checkAll" ><br>
+
+		<input type="checkbox" v-for="product in products" v-model="product.isSelected" >
+	</main>
+
+
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
