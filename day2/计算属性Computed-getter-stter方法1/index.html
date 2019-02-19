@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<title>day2-小练习：购物车（2）</title>
+	<title>day2-小练习：购物车（3）</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 	<!-- axios 给予promise的 -->
@@ -20,7 +20,7 @@
 			   <tr>
 				<th>全选 <input type="checkbox" 
 					v-model="checkAll"
-					@change="changeAll"></th>
+					></th>
 					<!-- click点击时CheckBox的状态还没有改变 所以拿到的总是相反的结果 用change事件： 改变后触发事件 -->
 				<td>商品</td>
 				<td>单价</td>
@@ -32,7 +32,7 @@
 		       <tr v-for="(product,index) in products">
 				<td><input type="checkbox" 
 					v-model="product.isSelected" 
-					@change="changeOne"></td>
+					></td>
 				<td>{{product.productName}}</td>
 				<td>{{product.productPrice}}</td>
 				<!-- .number 是让输入框的值变成数字类型 .lazy当输入框失去焦点时更新数据 -->
@@ -44,7 +44,7 @@
 				<td><button type="button" class="btn btn-danger" @click="remove(product)">删除</button></td>
 		      </tr>
 		      <tr>
-		      	<td colspan="6">总价格：{{sum() | toFixed(2)}}</td>
+		      	<td colspan="6">总价格：{{sum | toFixed(2)}}</td>
 		      	<!-- sum 函数  数据一变化它就变，算出最新结果。 不会缓存 性能不高 computed 可以解决这个问题-->
 		      </tr>
 		      </table>

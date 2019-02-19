@@ -30,6 +30,10 @@ let vm = new Vue({
     created:function(){this.getData();//调用函数 this是vm
                        },
     methods:{
+      sum(){return this.products.reduce((prev,next)=>{
+        if(!next.isSelected)return prev;
+        //如果没勾选中就不加当前这一项
+       return prev+next.productPrice*next.productCount},0)},
       changeOne(){this.checkAll= this.products.every(item=>item.isSelected)},
       changeAll(){this.products.forEach(item=> item.isSelected = this.checkAll)},
       remove(p){this.products = this.products.filter(item=> item !==p);},
