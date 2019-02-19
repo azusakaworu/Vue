@@ -5,4 +5,4 @@
 ## day2
 指令 promise ajax 购物车练习 v-model
 ## day3 
-computed watch 
+computed watch  v-if  v-else  v-bind  
