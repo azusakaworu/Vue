@@ -2,9 +2,10 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
 	
 	
-	<title>day2-</title>
+	<title>day2-animate.css</title>
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
 </head>
 <body>
@@ -13,9 +14,10 @@
     
 <!-- <div v-show="!flag">白糖</div> -->
 <button @click = "flag=!flag">切换</button>
-<transition name="miwou">
-	<div v-show="flag" style="width: 100px;height:100px;background-color: pink;">白糖2</div>
-</transition>
+<input type="text" v-model="query">
+<transition-group enter-active-class="animated flipInX" leave-active-class="animated flipInY">
+	<div v-for="(a,index) in newArr " :key="Math.random()">{{a}}</div>
+</transition-group>
 
 	</main>
 

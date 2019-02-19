@@ -1,7 +1,7 @@
 /*css*/
 /*div>div{
 	width: 100px;height: 100px;background-color: pink;
-}*/
+}
 
 .miwou-enter,.miwou-leave-active{ opacity: 0;}
 .miwou-enter-active, .miwou-leave-active{
@@ -9,4 +9,6 @@
     transition-property: opacity;
     transition-timing-function: ease;
   
-}
+}*/
+
+#masu{width: 100px;height: 100px;background-color: pink;}
